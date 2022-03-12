@@ -36,5 +36,6 @@
 .searchbar{
   position: absolute;
   top: 45%;
-  left: 25%;
+  left: 20%;
+  width: 30%;
 }
