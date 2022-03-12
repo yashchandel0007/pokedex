@@ -32,3 +32,9 @@
 .psyduckClass{
   transform: scale(0.5);
 }
+
+.searchbar{
+  position: absolute;
+  top: 45%;
+  left: 25%;
+}
