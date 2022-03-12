@@ -1,12 +1,10 @@
 <div>
-    <mat-toolbar>
-        <mat-card>
-            <img mat-card-image src="D:\Documents\Angular\pokedex\src\assets\images\pokemon-logo.png">
-        </mat-card>
+    <mat-toolbar class="topNavbar">
+        <img class="toolbarlogo" [src]="pokemonlogo" alt="Pokemon" >
+        <span class="toolbarlogo-subtext">Gotta Catcha 'Em All!</span> 
         <span class="example-spacer"></span>
     </mat-toolbar>
 </div>
-
 <div>
 <mat-form-field>
     <mat-label>Enter Pokemon to search</mat-label>
@@ -14,4 +12,4 @@
 </mat-form-field>
 </div>
 
-<app-psyduck-image></app-psyduck-image>
+<app-psyduck-image class="psyduckClass"></app-psyduck-image>

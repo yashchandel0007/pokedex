@@ -14,4 +14,6 @@ export class StartpageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  pokemonlogo:string =  'assets/images/pokemon_logo.png';
+
 }
