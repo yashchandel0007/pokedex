@@ -7,6 +7,7 @@ import { StartpageComponent } from './startpage/startpage.component';
 import { PsyduckImageComponent } from './psyduck-image/psyduck-image.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { PokemonService } from './pokemon.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [PokemonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, NgModule, OnInit } from '@angular/core';
+import { PokemonService } from '../pokemon.service';
 // import { PsyduckImageComponent } from '../psyduck-image/psyduck-image.component';
 
 @Component({
@@ -9,7 +10,10 @@ import { Component, NgModule, OnInit } from '@angular/core';
 
 export class StartpageComponent implements OnInit {
 
-  constructor() { }
+  getPokemonDetails(){
+    //this method get's called when search button is hit
+  }
+  constructor(private _pokemonService: PokemonService) { }
 
   ngOnInit(): void {
   }
