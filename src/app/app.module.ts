@@ -8,6 +8,7 @@ import { PsyduckImageComponent } from './psyduck-image/psyduck-image.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { PokemonService } from './pokemon.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PokemonService } from './pokemon.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [PokemonService],
   bootstrap: [AppComponent]
