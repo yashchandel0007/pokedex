@@ -21,9 +21,10 @@ export class StartpageComponent implements OnInit {
 
   getPokemonDetails(input:string){
     //this method get's called when search is performed
-    this._pokemonService.getPokemonDetails(input).subscribe(reponse=>{
-      this.PokemonSearchResponse = reponse;
-    })
+    this.PokemonSearchResponse = this._pokemonService.getPokemonDetails(input).subscribe((response)=>{
+      console.log("response",response);
+      this.PokemonSearchResponse = response;})
+    ;
   }
 
 }
