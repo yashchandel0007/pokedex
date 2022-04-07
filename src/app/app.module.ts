@@ -9,12 +9,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { PokemonService } from './pokemon.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PokeCardComponent } from './poke-card/poke-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StartpageComponent,
-    PsyduckImageComponent
+    PsyduckImageComponent,
+    PokeCardComponent
   ],
   imports: [
     BrowserModule,

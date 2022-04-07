@@ -13,6 +13,7 @@ export class StartpageComponent implements OnInit {
 
   PokemonSearchResponse: any;
   pokemonlogo:string =  'assets/images/pokemon_logo.png';
+  public isPokeCardVisible: Promise<Boolean> = Promise.resolve(false);
   
   constructor(private _pokemonService: PokemonService) { }
 
@@ -23,7 +24,8 @@ export class StartpageComponent implements OnInit {
     //this method get's called when search is performed
     this.PokemonSearchResponse = this._pokemonService.getPokemonDetails(input).subscribe((response)=>{
       console.log("response",response);
-      this.PokemonSearchResponse = response;})
+      this.PokemonSearchResponse = response;
+      this.isPokeCardVisible = Promise.resolve(true)})
     ;
   }
 
