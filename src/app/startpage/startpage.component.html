@@ -5,10 +5,14 @@
         <span class="example-spacer"></span>
     </mat-toolbar>
 </div>
-<mat-form-field class="searchbar" appearance="outline">
+
+<mat-form-field *ngIf="!(isPokeCardVisible | async)" class="searchbar" appearance="outline">
     <mat-label>Enter Pokemon to search</mat-label>
     <input #searchbox matInput placeholder="Pikachu" type="search" autofocus="all" (keyup.enter)="getPokemonDetails(searchbox.value)">
 </mat-form-field>
+
+<app-poke-card *ngIf="isPokeCardVisible | async" [pokemonData]="PokemonSearchResponse">
+</app-poke-card>
 
 <!-- snippet added just to display raw data -->
 <!-- {{PokemonSearchResponse.name}} -->

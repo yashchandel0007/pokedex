@@ -1,0 +1,21 @@
+mat-card{
+    width: 400px;
+    height: 600px;
+}
+mat-card img {
+    object-fit: cover;
+    width : 50%; 
+}
+
+card-background{
+    background-color: rgb(227, 155, 22);
+}
+
+mat-card mat-card-header img{
+    width: fit-content;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
