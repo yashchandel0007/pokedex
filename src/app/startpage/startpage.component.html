@@ -6,10 +6,15 @@
     </mat-toolbar>
 </div>
 
-<mat-form-field *ngIf="!(isPokeCardVisible | async)" class="searchbar" appearance="outline">
+<div class="searchbar">
+<mat-form-field *ngIf="!(isPokeCardVisible | async)"  appearance="outline">
     <mat-label>Enter Pokemon to search</mat-label>
     <input #searchbox matInput placeholder="Pikachu" type="search" autofocus="all" (keyup.enter)="getPokemonDetails(searchbox.value)">
 </mat-form-field>
+
+<button mat-stroked-button *ngIf="!(isPokeCardVisible | async)" (click)="fetchRandomPokemon()">Click here to generate random pokemon.</button>
+</div>
+
 
 <app-poke-card *ngIf="isPokeCardVisible | async" [pokemonData]="PokemonSearchResponse"  (emitter)="backButtonPressed($event)">
 </app-poke-card>

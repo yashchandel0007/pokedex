@@ -49,11 +49,10 @@
     'background-fairy':pokemonType == 'fairy',
     'background-unknown':pokemonType == 'unknown',
     'background-shadow':pokemonType == 'shadow'}"
-    [src]="mainCardImage" alt="image not found" onerror="altMainCardImage">
+    [src]="mainCardImage" alt="image not found" >
     <mat-card-content>
       <p>
-        The most popular pokemon across the globe. 
-        {{pokemonType}}
+        Type: {{pokemonType}}
         <!-- {{ this.pokemonData.types.type.name}} -->
       </p>
     </mat-card-content>
