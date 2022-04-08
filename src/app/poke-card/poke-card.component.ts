@@ -1,4 +1,5 @@
-import { Component, Input, OnInit, SimpleChange, SimpleChanges } from '@angular/core';
+import { Component, Input, OnInit, Output, SimpleChange, SimpleChanges } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 import { PokemonService } from '../pokemon.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class PokeCardComponent implements OnInit {
   public altMainCardImage: any;
   public mainCardHeaderImage: any;
   public altCardHeaderImage: any;
-
+  public isPokeCardVisible: boolean = false;
+  @Output() emitter:EventEmitter<boolean> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
@@ -23,13 +25,8 @@ export class PokeCardComponent implements OnInit {
     this.altMainCardImage = this.pokemonData.sprites.other["official-artwork"].front_default;
     this.mainCardHeaderImage = this.pokemonData.sprites.front_default;
     this.altCardHeaderImage = this.pokemonData.sprites.front_default;
-    
-
   }
-  // ngOnChanges(changes: SimpleChanges) {
-  //   // changes.prop contains the old and the new value...
-  //   console.log("ngOnChanges "+this.pokemonData);
-  //   console.log("ngOnchanges2 "+ this.pokemonData.name);
-  //   this.pokemonData = changes['pokemonData'];
-  // }
+  goBackShowSearchBar(){
+    this.emitter.emit(this.isPokeCardVisible);
+  }
 }
