@@ -15,16 +15,17 @@ export class PokeCardComponent implements OnInit {
   public mainCardHeaderImage: any;
   public altCardHeaderImage: any;
   public isPokeCardVisible: boolean = false;
+  public pokemonType!: string;
   @Output() emitter:EventEmitter<boolean> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
     console.log("ngOnInit"+this.pokemonData)
-    console.log("ngOnInit mainCardImage"+this.mainCardImage)
     this.mainCardImage = this.pokemonData.sprites.other["dream_world"].front_default;
     this.altMainCardImage = this.pokemonData.sprites.other["official-artwork"].front_default;
     this.mainCardHeaderImage = this.pokemonData.sprites.front_default;
     this.altCardHeaderImage = this.pokemonData.sprites.front_default;
+    this.pokemonType = this.pokemonData.types[0].type.name;
   }
   goBackShowSearchBar(){
     this.emitter.emit(this.isPokeCardVisible);
