@@ -11,36 +11,36 @@ img.mainImage{
     height: 300px; 
     /* background-color: green; */
 }
-
+/* most color themes are taken from https://bulbapedia.bulbagarden.net/wiki/Category:Type_color_templates */
 img.background-electic{
     background: linear-gradient(yellow, orange);
 }
 img.background-normal{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(#C6C6A7, #6D6D4E);
 }
 img.background-fighting{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(#D67873, #7D1F1A);
 }
 img.background-flying{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(#C6B7F5, #6D5E9C);
 }
 img.background-poision{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(#C183C1, #682A68);
 }
 img.background-ground{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(#EBD69D, #927D44);
 }
 img.background-rock{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(#D1C17D, #786824);
 }
 img.background-bug{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(#C6D16E, #6D7815);
 }
 img.background-ghost{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(#A292BC, #493963);
 }
 img.background-steel{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(#D1D1E0, #787887);
 }
 img.background-fire{
     background: linear-gradient(orange, red);
@@ -52,25 +52,25 @@ img.background-grass{
     background: linear-gradient(rgb(71, 133, 71), rgba(0, 128, 0, 0.223));
 }
 img.background-psychic{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(#FA92B2, #A13959);
 }
 img.background-ice{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(#BCE6E6, #638D8D);
 }
 img.background-dragon{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(#A27DFA, #4924A1);
 }
 img.background-dark{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(#A29288, #49392F);
 }
 img.background-fairy{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(#F4BDC9, #9B6470);
 }
 img.background-unknown{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(rgba(255, 255, 255, 0.43), rgba(0, 0, 0, 0.507));
 }
 img.background-shadow{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(#9c9da4, #2c2c34);
 }
 
 /* not working */
