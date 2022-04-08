@@ -1,6 +1,7 @@
 mat-card{
     width: 400px;
     height: 600px;
+    left: 20%;
 }
 
 img.mainImage{
@@ -13,7 +14,7 @@ img.mainImage{
 }
 /* most color themes are taken from https://bulbapedia.bulbagarden.net/wiki/Category:Type_color_templates */
 img.background-electic{
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(#FAE078, #A1871F);
 }
 img.background-normal{
     background: linear-gradient(#C6C6A7, #6D6D4E);
@@ -43,13 +44,13 @@ img.background-steel{
     background: linear-gradient(#D1D1E0, #787887);
 }
 img.background-fire{
-    background: linear-gradient(orange, red);
+    background: linear-gradient(#F5AC78, #9C531F);
 }
 img.background-water{
-    background: linear-gradient(aqua, blue);
+    background: linear-gradient(#94DBEE, #445E9C);
 }
 img.background-grass{
-    background: linear-gradient(rgb(71, 133, 71), rgba(0, 128, 0, 0.223));
+    background: linear-gradient(#A7DB8D, #4E8234);
 }
 img.background-psychic{
     background: linear-gradient(#FA92B2, #A13959);
@@ -82,4 +83,3 @@ card-background{
 mat-card mat-card-header img{
     width: fit-content;
 }
-
