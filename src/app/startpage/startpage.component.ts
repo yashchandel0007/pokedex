@@ -29,4 +29,9 @@ export class StartpageComponent implements OnInit {
     ;
   }
 
+  backButtonPressed(backButtonPressed:any){
+    this.isPokeCardVisible = Promise.resolve(backButtonPressed);
+    console.log("backbuttonpressed "+this.isPokeCardVisible);
+  }
+
 }

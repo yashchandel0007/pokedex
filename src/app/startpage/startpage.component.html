@@ -11,7 +11,7 @@
     <input #searchbox matInput placeholder="Pikachu" type="search" autofocus="all" (keyup.enter)="getPokemonDetails(searchbox.value)">
 </mat-form-field>
 
-<app-poke-card *ngIf="isPokeCardVisible | async" [pokemonData]="PokemonSearchResponse">
+<app-poke-card *ngIf="isPokeCardVisible | async" [pokemonData]="PokemonSearchResponse"  (emitter)="backButtonPressed($event)">
 </app-poke-card>
 
 <!-- snippet added just to display raw data -->
