@@ -26,6 +26,9 @@ export class PokeCardComponent implements OnInit {
     this.mainCardHeaderImage = this.pokemonData.sprites.front_default;
     this.altCardHeaderImage = this.pokemonData.sprites.front_default;
     this.pokemonType = this.pokemonData.types[0].type.name;
+    if(this.mainCardImage == null){
+      this.mainCardImage = this.altMainCardImage;
+    }
   }
   goBackShowSearchBar(){
     this.emitter.emit(this.isPokeCardVisible);
