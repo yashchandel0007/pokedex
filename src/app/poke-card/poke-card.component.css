@@ -2,14 +2,82 @@ mat-card{
     width: 400px;
     height: 600px;
 }
-mat-card img {
-    object-fit: cover;
-    width : 50%; 
+
+img.mainImage{
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width : 95%;
+    height: 300px; 
+    /* background-color: green; */
 }
 
+img.background-electic{
+    background: linear-gradient(yellow, orange);
+}
+img.background-normal{
+    background: linear-gradient(yellow, orange);
+}
+img.background-fighting{
+    background: linear-gradient(yellow, orange);
+}
+img.background-flying{
+    background: linear-gradient(yellow, orange);
+}
+img.background-poision{
+    background: linear-gradient(yellow, orange);
+}
+img.background-ground{
+    background: linear-gradient(yellow, orange);
+}
+img.background-rock{
+    background: linear-gradient(yellow, orange);
+}
+img.background-bug{
+    background: linear-gradient(yellow, orange);
+}
+img.background-ghost{
+    background: linear-gradient(yellow, orange);
+}
+img.background-steel{
+    background: linear-gradient(yellow, orange);
+}
+img.background-fire{
+    background: linear-gradient(orange, red);
+}
+img.background-water{
+    background: linear-gradient(aqua, blue);
+}
+img.background-grass{
+    background: linear-gradient(rgb(71, 133, 71), rgba(0, 128, 0, 0.223));
+}
+img.background-psychic{
+    background: linear-gradient(yellow, orange);
+}
+img.background-ice{
+    background: linear-gradient(yellow, orange);
+}
+img.background-dragon{
+    background: linear-gradient(yellow, orange);
+}
+img.background-dark{
+    background: linear-gradient(yellow, orange);
+}
+img.background-fairy{
+    background: linear-gradient(yellow, orange);
+}
+img.background-unknown{
+    background: linear-gradient(yellow, orange);
+}
+img.background-shadow{
+    background: linear-gradient(yellow, orange);
+}
+
+/* not working */
 card-background{
     background-color: rgb(227, 155, 22);
 }
+
 
 mat-card mat-card-header img{
     width: fit-content;

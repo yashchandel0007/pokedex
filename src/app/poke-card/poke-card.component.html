@@ -2,14 +2,58 @@
 
 <mat-card class="card-background">
     <mat-card-header>
-      <img mat-card-avatar [src]="mainCardHeaderImage" [alt]="altCardHeaderImage">
+      <img mat-card-avatar [ngClass]="{ 
+      'background-electic':pokemonType == 'electric',
+      'background-normal':pokemonType == 'normal',
+      'background-fighting':pokemonType == 'fighting',
+      'background-flying':pokemonType == 'flying',
+      'background-poison':pokemonType == 'poison',
+      'background-ground':pokemonType == 'ground',
+      'background-rock':pokemonType == 'rock',
+      'background-bug':pokemonType == 'bug',
+      'background-ghost':pokemonType == 'ghost',
+      'background-steel':pokemonType == 'steel',
+      'background-fire':pokemonType == 'fire',
+      'background-water':pokemonType == 'water',
+      'background-grass':pokemonType == 'grass',
+      'background-psychic':pokemonType == 'psychic',
+      'background-ice':pokemonType == 'ice',
+      'background-dragon':pokemonType == 'dragon',
+      'background-dark':pokemonType == 'dark',
+      'background-fairy':pokemonType == 'fairy',
+      'background-unknown':pokemonType == 'unknown',
+      'background-shadow':pokemonType == 'shadow'}"
+      [src]="mainCardHeaderImage" [alt]="altCardHeaderImage">
       <mat-card-title>{{pokemonData.name | titlecase}}</mat-card-title>
       <mat-card-subtitle>Best Pokemon Ever</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [src]="mainCardImage" [alt]="altMainCardImage">
+    <img mat-card-image [ngClass]="{'mainImage':true, 
+    'background-electic':pokemonType == 'electric',
+    'background-normal':pokemonType == 'normal',
+    'background-fighting':pokemonType == 'fighting',
+    'background-flying':pokemonType == 'flying',
+    'background-poison':pokemonType == 'poison',
+    'background-ground':pokemonType == 'ground',
+    'background-rock':pokemonType == 'rock',
+    'background-bug':pokemonType == 'bug',
+    'background-ghost':pokemonType == 'ghost',
+    'background-steel':pokemonType == 'steel',
+    'background-fire':pokemonType == 'fire',
+    'background-water':pokemonType == 'water',
+    'background-grass':pokemonType == 'grass',
+    'background-psychic':pokemonType == 'psychic',
+    'background-ice':pokemonType == 'ice',
+    'background-dragon':pokemonType == 'dragon',
+    'background-dark':pokemonType == 'dark',
+    'background-fairy':pokemonType == 'fairy',
+    'background-unknown':pokemonType == 'unknown',
+    'background-shadow':pokemonType == 'shadow'}"
+    [src]="mainCardImage" [alt]="altMainCardImage">
     <mat-card-content>
       <p>
         The most popular pokemon across the globe. 
+        {{pokemonType}}
+        <!-- {{ this.pokemonData.types.type.name}} -->
       </p>
     </mat-card-content>
     <mat-card-actions>
