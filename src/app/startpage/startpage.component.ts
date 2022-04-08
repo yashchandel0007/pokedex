@@ -22,7 +22,10 @@ export class StartpageComponent implements OnInit {
 
   getPokemonDetails(input:string){
     //this method get's called when search is performed
-    this.PokemonSearchResponse = this._pokemonService.getPokemonDetails(input).subscribe((response)=>{
+    input =  input.trim();
+    if(input == "")
+      return
+    this.PokemonSearchResponse = this._pokemonService.getPokemonDetails(input.toLowerCase( )).subscribe((response)=>{
       console.log("response",response);
       this.PokemonSearchResponse = response;
       this.isPokeCardVisible = Promise.resolve(true)})
@@ -33,5 +36,8 @@ export class StartpageComponent implements OnInit {
     this.isPokeCardVisible = Promise.resolve(backButtonPressed);
     console.log("backbuttonpressed "+this.isPokeCardVisible);
   }
-
+  fetchRandomPokemon(){
+    let temp = Math.floor(Math.random() * (898 - 1 + 1) + 1)
+    this.getPokemonDetails(temp.toString());
+  }
 }
