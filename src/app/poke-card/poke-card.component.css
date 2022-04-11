@@ -2,6 +2,7 @@ mat-card{
     width: 400px;
     height: 600px;
     left: 20%;
+    color:white;
 }
 
 img.mainImage{
@@ -9,8 +10,8 @@ img.mainImage{
     margin-left: auto;
     margin-right: auto;
     width : 95%;
-    height: 300px; 
-    /* background-color: green; */
+    min-height: 250px!important; 
+    max-height: 250px!important;
 }
 /* most color themes are taken from https://bulbapedia.bulbagarden.net/wiki/Category:Type_color_templates */
 img.background-electic{
@@ -74,12 +75,32 @@ img.background-shadow{
     background: linear-gradient(#9c9da4, #2c2c34);
 }
 
-/* not working */
-card-background{
-    background-color: rgb(227, 155, 22);
+/* alter to change backgroud color */
+::ng-deep.card-background{
+    background: linear-gradient(to bottom right,#FB1B1B,#0A285F);
 }
 
 
 mat-card mat-card-header img{
     width: fit-content;
+}
+
+::ng-deep.mat-tab-label{
+    height: 27px !important;
+    min-width: 10px!important;
+    color:white;
+}
+
+::ng-deep.mat-list-item{
+    height: 45px !important;
+    color:white;
+}
+
+::ng-deep.mat-tab-group{
+    max-height: 250px!important;
+    color:white;
+}
+
+::ng-deep.mat-line{
+    color:white;
 }
