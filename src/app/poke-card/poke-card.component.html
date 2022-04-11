@@ -57,7 +57,7 @@
             <mat-list>
               <mat-list-item *ngFor="let iterator of pokemonData.stats">
                 <span mat-line>{{iterator.stat.name | titlecase }}</span>
-                <mat-progress-bar mat-line mode="determinate" value="{{iterator.base_stat}}"></mat-progress-bar>
+                <mat-progress-bar class="green-progress" mat-line mode="determinate" value="{{iterator.base_stat}}"></mat-progress-bar>
               </mat-list-item>
             </mat-list>
           </mat-tab>
