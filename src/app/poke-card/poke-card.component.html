@@ -51,10 +51,21 @@
     'background-shadow':pokemonType == 'shadow'}"
     [src]="mainCardImage" alt="image not found" >
     <mat-card-content>
-      <p>
-        Type: {{pokemonType}}
-        <!-- {{ this.pokemonData.types.type.name}} -->
-      </p>
+      <!-- dynamicHeight -->
+        <mat-tab-group  mat-align-tabs="center" fxFill>  
+          <mat-tab label="Stats">
+            <mat-list>
+              <mat-list-item *ngFor="let iterator of pokemonData.stats">
+                <span mat-line>{{iterator.stat.name | titlecase }}</span>
+                <mat-progress-bar mat-line mode="determinate" value="{{iterator.base_stat}}"></mat-progress-bar>
+              </mat-list-item>
+            </mat-list>
+          </mat-tab>
+          <mat-tab label="General">
+          </mat-tab>
+          <mat-tab label="Other">
+          </mat-tab>
+        </mat-tab-group>
     </mat-card-content>
     <mat-card-actions>
     </mat-card-actions>
