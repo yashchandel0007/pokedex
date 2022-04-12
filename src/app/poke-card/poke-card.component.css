@@ -92,7 +92,7 @@ mat-card mat-card-header img{
 }
 
 ::ng-deep.mat-list-item{
-    height: 45px !important;
+    height: 35px !important;
     color:white;
 }
 
@@ -111,5 +111,6 @@ mat-card mat-card-header img{
 ::ng-deep.mat-progress-bar-buffer {
     background-color: grey;
  }
- ::ng-deep.mat-ink-bar {
-    background-color:white !important;}
+::ng-deep.mat-ink-bar {
+    background-color:white !important;
+}
