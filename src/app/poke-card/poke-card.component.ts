@@ -16,6 +16,7 @@ export class PokeCardComponent implements OnInit {
   public altCardHeaderImage: any;
   public isPokeCardVisible: boolean = false;
   public pokemonType!: string;
+  public generalDescription:any = {};
   @Output() emitter:EventEmitter<boolean> = new EventEmitter();
   constructor() { }
 
@@ -29,6 +30,12 @@ export class PokeCardComponent implements OnInit {
     if(this.mainCardImage == null){
       this.mainCardImage = this.altMainCardImage;
     }
+    this.generalDescription.height =  (this.pokemonData.height)/10;
+    this.generalDescription.weight = (this.pokemonData.weight)/10;
+    this.generalDescription.pokeId = this.pokemonData.id;
+    this.generalDescription.baseExperience = this.pokemonData.base_experience;
+    this.generalDescription.types = this.pokemonData.types;  
+
   }
   goBackShowSearchBar(){
     this.emitter.emit(this.isPokeCardVisible);

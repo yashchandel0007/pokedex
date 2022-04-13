@@ -93,7 +93,6 @@ mat-card mat-card-header img{
 
 ::ng-deep.mat-list-item{
     height: 35px !important;
-    color:white;
 }
 
 ::ng-deep.mat-tab-group{
@@ -113,4 +112,18 @@ mat-card mat-card-header img{
  }
 ::ng-deep.mat-ink-bar {
     background-color:white !important;
+}
+
+.general-list-item{
+    color: white;
+    /* display: flex; */
+    justify-content: space-between;
+}
+
+::ng-deep.mat-divider{
+    border-top-color: rgba(245, 245, 245, 0.358);
+}
+
+.mat-card-subtitle{
+    color: whitesmoke;
 }
