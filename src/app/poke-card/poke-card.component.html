@@ -26,7 +26,7 @@
       'background-shadow':pokemonType == 'shadow'}"
       [src]="mainCardHeaderImage" alt="X">
       <mat-card-title>{{pokemonData.name | titlecase}}</mat-card-title>
-      <mat-card-subtitle>Best Pokemon Ever</mat-card-subtitle>
+      <mat-card-subtitle [ngClass]="'mat-card-subtitle'">{{pokemonType | titlecase}} Type Pokemon!</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image [ngClass]="{'mainImage':true, 
     'background-electic':pokemonType == 'electric',
@@ -52,7 +52,7 @@
     [src]="mainCardImage" alt="image not found" >
     <mat-card-content>
       <!-- dynamicHeight -->
-        <mat-tab-group  mat-align-tabs="center" fxFill>  
+        <mat-tab-group dynamicHeight mat-align-tabs="center" fxFill>  
           <mat-tab label="Stats">
             <mat-list>
               <mat-list-item *ngFor="let iterator of pokemonData.stats">
@@ -62,6 +62,31 @@
             </mat-list>
           </mat-tab>
           <mat-tab label="General">
+            <div>
+              <mat-list [ngClass]="''">
+                <mat-list-item [ngClass]="'general-list-item'">
+                  <span mat-line>Pokemon ID:&nbsp;</span><span mat-line-end>{{ this.generalDescription.pokeId }}</span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item [ngClass]="'general-list-item'">
+                  <span mat-line>Exp:&nbsp;</span><span mat-line-end>{{ this.generalDescription.baseExperience }}</span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item [ngClass]="'general-list-item'">
+                  <span mat-line>Height:&nbsp;</span><span mat-line-end>{{ this.generalDescription.height }}&nbsp;m</span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item [ngClass]="'general-list-item'">
+                  <span mat-line>Weight:&nbsp;</span><span mat-line-end>{{ this.generalDescription.weight }}&nbsp;kg</span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item [ngClass]="'general-list-item'">
+                  <span mat-line>Type:&nbsp;</span>
+                  <span mat-line-end>{{ this.generalDescription.types[0]?.type.name | titlecase}}&nbsp;</span>
+                  <span mat-line-end>{{ this.generalDescription.types[1]?.type.name | titlecase}}</span>
+                </mat-list-item>
+              </mat-list>
+            </div>
           </mat-tab>
           <mat-tab label="Other">
           </mat-tab>
